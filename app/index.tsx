@@ -5,22 +5,61 @@ export default function Index() {
     <View
       style={{
         flex: 1,
-        justifyContent: "center",
+
         alignItems: "center",
-        backgroundColor: "#aaaaaaff",
+        backgroundColor: "#2D2D2A",
       }}
     >
+      <View
+        style={{
+          width: 400,
+          height: 10,
+          backgroundColor: "#3F5E5A",
+        }}
+      ></View>
+      <View
+        style={{
+          width: 400,
+          height: 10,
+          backgroundColor: "#38423B",
+        }}
+      ></View>
+      <View
+        style={{
+          width: 400,
+          height: 10,
+          backgroundColor: "#353831",
+        }}
+      ></View>
       <Image
         style={{
           width: 200,
           height: 200,
-          margin: 50,
+          margin: 20,
           resizeMode: "contain",
+          borderWidth: 1,
+          borderColor: "#fff",
+          borderRadius: 50,
         }}
         source={require("../assets/images/foto.jpg")}
       ></Image>
-      <Text style={{ color: "fff" }}> Gabriel Santos.</Text>
-      <Text /*style={{backgroundColor:"#FFF"}}*/>Minha bio é isso ai </Text>
+      <Text style={{ color: "#fff", fontSize: 28, fontWeight: "bold" }}>
+        {" "}
+        Gabriel Santos
+      </Text>
+      <Text
+        style={{
+          color: "#fff",
+          fontWeight: "thin",
+          fontSize: 16,
+          textAlign: "center",
+          margin: 20,
+        }}
+      >
+        {" "}
+        Olá, sou um estudante de Sistemas Para Internet, e essa é a cadeira de
+        Desenvolvimento Mobile. Estou no quarto período do curso!
+      </Text>
     </View>
   );
 }
@@ -45,4 +84,9 @@ seu repositório no github
 seu app no Expo (over-the-air updates)
 OBS: NÃO é para anexar um arquivo texto com as URLs, é para anexar diretamente as duas URLs.
 
+2D2D2A
+353831
+38423B
+3F5E5A
+20fc8f
 */
