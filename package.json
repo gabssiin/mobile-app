@@ -40,7 +40,8 @@
     "react-native-webview": "13.13.5",
     "expo-dev-client": "~5.2.4",
     "expo-insights": "~0.9.3",
-    "expo-updates": "~0.28.17"
+    "expo-updates": "~0.28.17",
+    "expo-linear-gradient": "~14.1.5"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

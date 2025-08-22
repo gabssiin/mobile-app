@@ -1,32 +1,41 @@
 import { Image, Text, View, StyleSheet } from "react-native";
-
+import { LinearGradient } from "expo-linear-gradient";
 export default function Index() {
   return (
     <View
       style={{
         flex: 1,
-
         alignItems: "center",
         backgroundColor: "#2D2D2A",
       }}
     >
+      <LinearGradient
+        colors={["#353831", "transparent"]}
+        style={{
+          position: "absolute",
+          left: 0,
+          right: 0,
+          top: 0,
+          height: 300,
+        }}
+      />
       <View
         style={{
-          width: 400,
+          width: 1600,
           height: 10,
           backgroundColor: "#3F5E5A",
         }}
       ></View>
       <View
         style={{
-          width: 400,
+          width: 1600,
           height: 10,
           backgroundColor: "#38423B",
         }}
       ></View>
       <View
         style={{
-          width: 400,
+          width: 1600,
           height: 10,
           backgroundColor: "#353831",
         }}
@@ -39,10 +48,10 @@ export default function Index() {
           resizeMode: "contain",
           borderWidth: 1,
           borderColor: "#fff",
-          borderRadius: 50,
+          borderRadius: 75,
         }}
         source={require("../assets/images/foto.jpg")}
-      ></Image>
+      />
       <Text style={{ color: "#fff", fontSize: 28, fontWeight: "bold" }}>
         {" "}
         Gabriel Santos
@@ -50,7 +59,7 @@ export default function Index() {
       <Text
         style={{
           color: "#fff",
-          fontWeight: "thin",
+          fontWeight: "200",
           fontSize: 16,
           textAlign: "center",
           margin: 20,
@@ -59,6 +68,9 @@ export default function Index() {
         {" "}
         Olá, sou um estudante de Sistemas Para Internet, e essa é a cadeira de
         Desenvolvimento Mobile. Estou no quarto período do curso!
+      </Text>
+      <Text >
+
       </Text>
     </View>
   );
