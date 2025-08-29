@@ -1,5 +1,13 @@
-import { Image, Text, View, StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { Image, Text, View } from "react-native";
+
+// baixar e importar:
+//import { PizzaTranslator } from "@/components/PizzaTranslator";
+// import { ScrollViewApp } from "@/components/ScrollViewApp";
+// import { FlatListExample } from "@/components/FlatListExample";
+//import { SectionListExample } from "@/components/SectionListExample";
+// aprender a usar os components basicos do reactnative
+//expo image e router, safe area a-sync storage
 export default function Index() {
   return (
     <View
@@ -21,7 +29,7 @@ export default function Index() {
       />
       <View
         style={{
-          width: 1600,
+          width: "100%",
           height: 10,
           backgroundColor: "#3F5E5A",
         }}
@@ -69,9 +77,7 @@ export default function Index() {
         Olá, sou um estudante de Sistemas Para Internet, e essa é a cadeira de
         Desenvolvimento Mobile. Estou no quarto período do curso!
       </Text>
-      <Text >
-
-      </Text>
+      <Text></Text>
     </View>
   );
 }
