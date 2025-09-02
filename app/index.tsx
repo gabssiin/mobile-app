@@ -1,5 +1,9 @@
-import { Image, Text, View, StyleSheet } from "react-native";
+import { useState } from "react";
+import { Image, Text, View, StyleSheet, Switch } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { PizzaTranslator } from "@/components/PizzaTranslator";
+import { SectionListExample } from "@/components/SectionListExample";
+
 export default function Index() {
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
@@ -24,76 +28,83 @@ export default function Index() {
   }
 
   return (
-    <View
-      style={{
-        flex: 1,
-        alignItems: "center",
-        backgroundColor: "#2D2D2A",
-      }}
-    >
-      <LinearGradient
-        colors={["#353831", "transparent"]}
-        style={{
-          position: "absolute",
-          left: 0,
-          right: 0,
-          top: 0,
-          height: 300,
-        }}
-      />
+    <View style={{ flex: 1 }}>
+      <View style={{ alignItems: "center" }}>
+        <Switch
+          trackColor={{ false: "#767577", true: "#81b0ff" }}
+          thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
+          ios_backgroundColor="#3e3e3e"
+          onValueChange={toggleSwitch}
+          value={isEnabled}
+        />
+        {MyComponent}
+      </View>
       <View
         style={{
-          width: 1600,
-          height: 10,
-          backgroundColor: "#3F5E5A",
-        }}
-      ></View>
-      <View
-        style={{
-          width: 1600,
-          height: 10,
-          backgroundColor: "#38423B",
-        }}
-      ></View>
-      <View
-        style={{
-          width: 1600,
-          height: 10,
-          backgroundColor: "#353831",
-        }}
-      ></View>
-      <Image
-        style={{
-          width: 200,
-          height: 200,
-          margin: 20,
-          resizeMode: "contain",
-          borderWidth: 1,
-          borderColor: "#fff",
-          borderRadius: 75,
-        }}
-        source={require("../assets/images/foto.jpg")}
-      />
-      <Text style={{ color: "#fff", fontSize: 28, fontWeight: "bold" }}>
-        {" "}
-        Gabriel Santos
-      </Text>
-      <Text
-        style={{
-          color: "#fff",
-          fontWeight: "200",
-          fontSize: 16,
-          textAlign: "center",
-          margin: 20,
+          flex: 1,
+          alignItems: "center",
+          backgroundColor: "#2D2D2A",
         }}
       >
-        {" "}
-        Olá, sou um estudante de Sistemas Para Internet, e essa é a cadeira de
-        Desenvolvimento Mobile. Estou no quarto período do curso!
-      </Text>
-      <Text >
-
-      </Text>
+        <LinearGradient
+          colors={["#353831", "transparent"]}
+          style={{
+            position: "absolute",
+            left: 0,
+            right: 0,
+            top: 0,
+            height: 300,
+          }}
+        />
+        <View
+          style={{
+            width: 1600,
+            height: 10,
+            backgroundColor: "#3F5E5A",
+          }}
+        />
+        <View
+          style={{
+            width: 1600,
+            height: 10,
+            backgroundColor: "#38423B",
+          }}
+        />
+        <View
+          style={{
+            width: 1600,
+            height: 10,
+            backgroundColor: "#353831",
+          }}
+        />
+        <Image
+          style={{
+            width: 200,
+            height: 200,
+            margin: 20,
+            resizeMode: "contain",
+            borderWidth: 1,
+            borderColor: "#fff",
+            borderRadius: 75,
+          }}
+          source={require("../assets/images/foto.jpg")}
+        />
+        <Text style={{ color: "#fff", fontSize: 28, fontWeight: "bold" }}>
+          Gabriel Santos
+        </Text>
+        <Text
+          style={{
+            color: "#fff",
+            fontWeight: "200",
+            fontSize: 16,
+            textAlign: "center",
+            margin: 20,
+          }}
+        >
+          Olá, sou um estudante de Sistemas Para Internet, e essa é a cadeira de
+          Desenvolvimento Mobile. Estou no quarto período do curso!
+        </Text>
+      </View>
     </View>
   );
 }
