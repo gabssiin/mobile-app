@@ -1,11 +1,11 @@
-import { useState } from "react";
-import { Image, Text, View, StyleSheet, Switch } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { Image, Text, View } from "react-native";
+import { useState } from "react";
+import { Image, StyleSheet, Switch, Text, View } from "react-native";
 
 // baixar e importar:
-//import { PizzaTranslator } from "@/components/PizzaTranslator";
-// import { ScrollViewApp } from "@/components/ScrollViewApp";
+import { PizzaTranslator } from "@/components/PizzaTranslator";
+import { SectionListExample } from "@/components/SectionListExample";
+import { ScrollViewApp } from "@/components/ScrollViewApp";
 // import { FlatListExample } from "@/components/FlatListExample";
 //import { SectionListExample } from "@/components/SectionListExample";
 // aprender a usar os components basicos do reactnative
@@ -25,7 +25,7 @@ export default function Index() {
           flex: 1,
           justifyContent: "flex-start",
           alignItems: "center",
-          marginTop: 25,
+          marginTop: 1,
         }}
       >
         <Text style={styles.title}>Olá Turma!</Text>
@@ -111,6 +111,7 @@ export default function Index() {
           Olá, sou um estudante de Sistemas Para Internet, e essa é a cadeira de
           Desenvolvimento Mobile. Estou no quarto período do curso!
         </Text>
+        <ScrollViewApp/>
       </View>
     </View>
   );

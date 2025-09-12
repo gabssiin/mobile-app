@@ -2,6 +2,7 @@ import { SectionList, StyleSheet, Text, View } from "react-native";
 
 import { PEOPLE_LIST as DATA } from "@/data";
 import { transformListToSectionList } from "@/utils";
+import { ScrollView } from "./ScrollView";
 
 const styles = StyleSheet.create({
   container: {
@@ -30,14 +31,17 @@ const TRANSFORMED_DATA = transformListToSectionList(DATA);
 export const SectionListExample = () => {
   return (
     <View style={styles.container}>
-      <SectionList
-        sections={TRANSFORMED_DATA}
-        renderItem={({ item }) => <Text style={styles.item}>{item}</Text>}
-        renderSectionHeader={({ section }) => (
-          <Text style={styles.sectionHeader}>{section.title}</Text>
-        )}
-        keyExtractor={(item) => `basicListEntry-${item}`}
-      />
+      <ScrollView>
+        {" "}
+        <SectionList
+          sections={TRANSFORMED_DATA}
+          renderItem={({ item }) => <Text style={styles.item}>{item}</Text>}
+          renderSectionHeader={({ section }) => (
+            <Text style={styles.sectionHeader}>{section.title}</Text>
+          )}
+          keyExtractor={(item) => `basicListEntry-${item}`}
+        />
+      </ScrollView>
     </View>
   );
 };
