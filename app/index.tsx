@@ -8,6 +8,7 @@ import { Image, Text, View } from "react-native";
 //import { SectionListExample } from "@/components/SectionListExample";
 // aprender a usar os components basicos do reactnative
 //expo image e router, safe area a-sync storage
+// zustand pesquisar sobre async storage
 export default function Index() {
   return (
     <View
